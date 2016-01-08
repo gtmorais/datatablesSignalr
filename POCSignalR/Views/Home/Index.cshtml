@@ -1,0 +1,49 @@
+﻿@using POCSignalR.Workspace;
+@model Task
+@{
+    ViewBag.Title = "SignalR DataTables";
+}
+
+<div class="row">
+    <div class="dataTables_wrapper">
+        <h2>Results</h2>
+        <br/>
+            <table id="gridResultado" class="display table table-striped table-bordered table-hover" cellspacing="0" width="100%">
+
+                <thead>
+                    <tr>
+                        <th>AssignedTo</th>
+                        <th>Title</th>
+                        <th>Priority</th>
+                        <th>Tupe</th>
+
+                        <th>Source</th>
+                        <th>DueDate</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+            </table>
+    </div>
+</div>
+
+<br/>
+<div class="row">
+    <button id="button" class="fg-button btn btn-default">Create Task</button>
+</div>
+
+    @section styles{
+        <link href="~/Content/DataTables/css/jquery.dataTables.min.css" rel="stylesheet" />
+        <link href="~/Content/font-awesome.css" rel="stylesheet" />
+    }
+
+    @section scripts {
+        <script src="~/Scripts/jquery.dateFormat-1.0.js"></script>
+        <script src="~/Scripts/jquery.countdown.min.js"></script>
+        <script src="~/Scripts/jquery.color-2.1.2.min.js"></script>
+        <script src="~/Scripts/jquery.signalR-2.2.0.js"></script>
+        <script src="~/Scripts/startup.js"></script>
+        <script src="~/signalr/hubs"></script>
+        <script src="~/Scripts/SignalRWorkspace.js"></script>
+        <script src="~/Scripts/DataTables/jquery.dataTables.min.js"></script>
+        <script src="~/Scripts/datatables.responsive.min.js"></script>
+    }
