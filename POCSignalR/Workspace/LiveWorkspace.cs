@@ -43,10 +43,10 @@ namespace POCSignalR.Workspace
         private LiveWorkspace(IHubConnectionContext<dynamic> clients)
         {
             Clients = clients;
-            CarregarDadosPadrao();
+            LoadDefaultData();
         }
 
-        private void CarregarDadosPadrao()
+        private void LoadDefaultData()
         {
             _tasks = GetAllTasks();
         }
@@ -134,6 +134,18 @@ namespace POCSignalR.Workspace
                 task.DataFim = DateTime.Now.AddMinutes(10);
                 task.PrazoRestante = (task.DataFim - task.DataCriado).ToString();
                 task.Prioridade = "High";
+                task.Origem = "Portal";
+                task.TipoProcesso = "";
+                Tarefas.Add(task);
+
+                task = new Task();
+                task.ID = 3;
+                task.Responsavel = "Group1";
+                task.Titulo = "Review Request";
+                task.DataCriado = DateTime.Now;
+                task.DataFim = DateTime.Now.AddMinutes(1);
+                task.PrazoRestante = (task.DataFim - task.DataCriado).ToString();
+                task.Prioridade = "Low";
                 task.Origem = "Portal";
                 task.TipoProcesso = "";
                 Tarefas.Add(task);
