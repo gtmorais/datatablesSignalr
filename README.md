@@ -1,3 +1,3 @@
 # datatablesSignalr
 
-This is a sample application using SignalR and jQuery DataTables.Net.
+This is a sample MVC application using SignalR for realtime and jQuery DataTables.Net for data presentation.
